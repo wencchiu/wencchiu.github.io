@@ -1,0 +1,52 @@
+.article-title {
+  margin: 50px 0 100px;
+  position: relative;
+  color: #262626;
+
+  @media (max-width: 768px) {
+    margin: 60px auto;
+  }
+
+  &::after {
+    content: "";
+    height: 180px;
+    width: 180px;
+    border-radius: 90px;
+    background-color: $orange;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 90px);
+    opacity: 0.2;
+
+    @media (max-width: 768px) {
+      height: 140px;
+      width: 140px;
+      border-radius: 70px;
+      top: -20px;
+      left: calc(50% - 70px);
+    }
+  }
+
+  h3 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-align: center;
+    line-height: 100px;
+    font-family: "Ubuntu", sans-serif;
+    position: relative;
+    z-index: 5;
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
+  }
+
+  .skill-container &::after {
+    background-color: $red;
+  }
+
+  .works-container &::after {
+    background-color: $blue-green;
+  }
+}

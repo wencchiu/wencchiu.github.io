@@ -1,0 +1,61 @@
+.exp-box {
+  width: 260px;
+  height: 260px;
+  background-color: $white;
+  font-family: "Ubuntu", sans-serif;
+  padding: 64px 25px 0;
+  text-align: left;
+  color: $black;
+  border-bottom: $orange solid 6px;
+  border-radius: 6px;
+  box-shadow: 0 0 1em $gray;
+
+  @media (max-width: 1024px) {
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+  }
+
+  @media (max-width: 767px) {
+    width: 230px;
+    height: 230px;
+    padding: 35px;
+  }
+
+  h5 {
+    font-family: "Open Sans Condensed", sans-serif;
+    margin-bottom: 10px;
+    font-size: 26px;
+    @media (max-width: 1024px) {
+      font-size: 22px;
+    }
+  }
+
+  h6 {
+    font-size: 22px;
+    font-weight: 600;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+.job-container {
+  display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.job-container div:nth-child(2) {
+  border-bottom: $red solid 6px;
+}
+
+.job-container div:nth-child(3) {
+  border-bottom: $blue-green solid 6px;
+}

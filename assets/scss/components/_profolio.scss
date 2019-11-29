@@ -1,0 +1,80 @@
+.work {
+  border: 8px $white solid;
+  box-shadow: 0 0 1em $gray;
+}
+
+.work-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 180px;
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+  border-bottom: 8px $white solid;
+
+  a {
+    z-index: 9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $black;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  &:hover::after {
+    opacity: 0.4;
+  }
+}
+
+.work-yuanta {
+  background-image: url("~/assets/images/yuanta-cover.png");
+}
+
+.work-forecast {
+  background-image: url("~/assets/images/weather-cover.png");
+}
+
+.work-text {
+  height: 90px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+
+  p {
+    color: $black;
+  }
+}
+
+.work-link-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background: $white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+
+  .work-image:hover & {
+    opacity: 1;
+  }
+}
+
+.work-link-image {
+  width: 40px;
+  height: 40px;
+  background-image: url("~/assets/images/link.svg");
+}

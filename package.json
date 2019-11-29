@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "posthtml-include": "^1.3.2",
+    "sass": "^1.23.7"
+  },
+  "name": "wencchiu.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wencchiu/wencchiu.github.io.git",
+  "author": "WenChiu <wen2214@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel *.html -d dist-dev",
+    "build": "parcel build *.html --no-source-maps"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

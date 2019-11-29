@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"assets/scss/style.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./hr-image-ConvertImage.png":[["hr-image-ConvertImage.38b86946.png","hr-image-ConvertImage.png"],"hr-image-ConvertImage.png"],"./programming-image.jpg":[["programming-image.ef997322.jpg","programming-image.jpg"],"programming-image.jpg"],"./yuanta-image.png":[["yuanta-image.06406267.png","yuanta-image.png"],"yuanta-image.png"],"./forecast-image.png":[["forecast-image.9700a4ef.png","forecast-image.png"],"forecast-image.png"],"./link-solid.svg":[["link-solid.a3834907.svg","link-solid.svg"],"link-solid.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/Users/wenchiu/tmot/wencchiu.github.io/assets/images/hr.png":[["hr.9672a5d8.png","assets/images/hr.png"],"assets/images/hr.png"],"/Users/wenchiu/tmot/wencchiu.github.io/assets/images/programming.jpg":[["programming.2e425297.jpg","assets/images/programming.jpg"],"assets/images/programming.jpg"],"/Users/wenchiu/tmot/wencchiu.github.io/assets/images/yuanta-cover.png":[["yuanta-cover.a06897f0.png","assets/images/yuanta-cover.png"],"assets/images/yuanta-cover.png"],"/Users/wenchiu/tmot/wencchiu.github.io/assets/images/weather-cover.png":[["weather-cover.ec7898fb.png","assets/images/weather-cover.png"],"assets/images/weather-cover.png"],"/Users/wenchiu/tmot/wencchiu.github.io/assets/images/link.svg":[["link.65c729e6.svg","assets/images/link.svg"],"assets/images/link.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52056" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -248,8 +248,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else {
-        window.location.reload();
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
       }
     }
 
@@ -393,4 +394,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/style.e308ff8e.js.map
+//# sourceMappingURL=/style.5d3ad0c4.js.map

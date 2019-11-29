@@ -1,0 +1,48 @@
+.skill {
+  width: 400px;
+  height: 266px;
+  border-radius: 10px;
+  position: relative;
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 200px;
+  }
+
+  p {
+    position: absolute;
+    z-index: 9;
+    color: $white;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+    text-align: right;
+    bottom: 30px;
+    right: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    background-color: $black;
+    opacity: 0.4;
+  }
+}
+
+.skill-hr {
+  background-image: url("~/assets/images/hr.png");
+}
+
+.skill-programming {
+  background-image: url("~/assets/images/programming.jpg");
+}
